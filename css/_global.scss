@@ -1,0 +1,39 @@
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; 
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: scroll-behavior 0.3 ease-in-out;
+}
+.wrapper {
+  max-width: 1920px;
+  margin-inline:  auto;
+  // border: 2px solid red;
+  position: relative;
+}
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin-inline:  auto;
+  // border-left: 1px solid #000;
+  // border-right: 1px solid #000;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: none;
+  color: transparent;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
