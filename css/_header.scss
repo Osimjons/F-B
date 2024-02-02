@@ -7,7 +7,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
   }
   // .header__logo
   &__logo {
@@ -22,13 +21,15 @@
     justify-content: center;
     align-items: center;
     padding: 0 7px;
-    width: 100%;
-    & :not(:last-child){
-      margin-right: 64px;
+    column-gap: 63px;
+    @media (max-width:768px) {
+      column-gap: 40px;
     }
   }
   // .header__item
   &__item {
+    
+    
   }
   // .header__link
   &__link {
@@ -41,6 +42,9 @@
     }
     &:hover {
       color: var(--primary_green);
+    }
+    @media (max-width: 768) {
+      font-size: 14px;
     }
   }
 }

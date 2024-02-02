@@ -6,6 +6,10 @@
   --transition: 0.8 ease ;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -14,19 +18,11 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  -webkit-transition: scroll-behavior 0.3 ease-in-out;
-  transition: scroll-behavior 0.3 ease-in-out;
-}
-
-.wrapper {
-  max-width: 1920px;
-  margin-inline: auto;
-  position: relative;
 }
 
 .container {
   max-width: 1140px;
-  padding: 0 15px;
+  padding: 0 15px 0 15px;
   margin-inline: auto;
 }
 
@@ -65,7 +61,6 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
 }
 .header__logo:focus-visible {
   outline: 2px solid var(--primary_green);
@@ -83,10 +78,16 @@ h1, h2, h3, h4, h5, h6, p {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 7px;
-  width: 100%;
+  -webkit-column-gap: 63px;
+     -moz-column-gap: 63px;
+          column-gap: 63px;
 }
-.header__list :not(:last-child) {
-  margin-right: 64px;
+@media (max-width: 768px) {
+  .header__list {
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
 }
 .header__link {
   color: var(--white);
@@ -99,6 +100,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .header__link:hover {
   color: var(--primary_green);
+}
+@media (max-width: 768) {
+  .header__link {
+    font-size: 14px;
+  }
 }
 
 .right-block {
@@ -115,20 +121,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .hero {
   overflow: hidden;
-}
-.hero img {
-  max-height: 570px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  position: absolute;
-  top: 6px;
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(29, 47, 48, 0.7)), to(rgba(29, 47, 48, 0.7))), url(../img/1_1.png) center/cover no-repeat;
+  background: linear-gradient(to top, rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url(../img/1_1.png) center/cover no-repeat;
 }
 .hero__title {
   margin-top: 115px;
@@ -389,27 +383,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .help {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(29, 47, 48, 0.7)), to(rgba(29, 47, 48, 0.7))), url(../img/111.png) center/cover no-repeat;
+  background: linear-gradient(to top, rgba(29, 47, 48, 0.7), rgba(29, 47, 48, 0.7)), url(../img/111.png) center/cover no-repeat;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-position: center;
-  right: 0;
-}
-.help img {
-  position: absolute;
-  max-height: 483px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -1;
-  width: 100%;
-  right: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
 }
 .help__title {
   color: var(--white, #fff);
@@ -473,11 +451,8 @@ footer {
 .social svg {
   fill: #899d9d;
 }
-.social svg:hover {
-  fill: var(--primary_green);
-}
 @media (hover: hover) {
-  .social img {
+  .social svg:hover img {
     fill: var(--primary_green);
   }
 }

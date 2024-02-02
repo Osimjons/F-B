@@ -12,12 +12,12 @@ footer {
   & svg {
     fill: #899d9d;
     &:hover{
-      fill: var(--primary_green);
+      // fill: var(--primary_green);
+      @media (hover: hover) {
+        & img {
+          fill: var(--primary_green);
+        }
+      }
     };
-  }
-  @media (hover: hover) {
-    & img {
-      fill: var(--primary_green);
-    }
   }
 }

@@ -1,30 +1,8 @@
 .help {
+  background: linear-gradient(to top, rgba(29, 47, 48, 0.7), rgba(29, 47, 48,0.7) ), url(../img/111.png) center/cover no-repeat;
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
-  & img {
-    position: absolute;
-    max-height: 483px;
-    object-fit: cover;
-    z-index: -1;
-    width: 100%;
-    right: 0;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    filter: brightness(50%);
-  }
-  // background-image: url(../img/111.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  background-position: center;
-
-  right: 0;
-  // background-position: center;
-
-  // .help__container
-  &__container {
-  }
   // .help__title
   &__title {
     color: var(--white, #fff);
